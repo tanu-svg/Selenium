@@ -11,5 +11,5 @@ steps:
   - script: mvn clean install
     displayName: 'Build with Maven'  # Run Maven to clean and build the project.
 
-  - script: java -jar target/MyMavenSeleniumApp01 -1.0-SNAPSHOT.jar
+  - script: java -jar target/MyMavenSeleniumApp01-1.0-SNAPSHOT.jar
     displayName: 'Running jar'  # Run the generated JAR file after the build.

@@ -1,0 +1,15 @@
+trigger:
+  - master  # This triggers the pipeline when changes are pushed to the master branch.
+
+pool:
+  name: Default  # Use the default agent pool for this pipeline.
+
+steps:
+  - script: echo "My first Azure Pipeline for Maven project"
+    displayName: 'Run a one-line script'  # Display a simple message for the first step.
+
+  - script: mvn clean install
+    displayName: 'Build with Maven'  # Run Maven to clean and build the project.
+
+  - script: java -jar target/MyMavenApp-1.0-SNAPSHOT.jar
+    displayName: 'Running jar'  # Run the generated JAR file after the build.
